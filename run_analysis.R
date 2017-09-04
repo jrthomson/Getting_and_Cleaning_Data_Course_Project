@@ -51,7 +51,7 @@ colnames(activities) <- c("activityId", "activityLabel")
 
 ########
 #
-# 3. Merge the training and test sets to make one data set
+# 3. Merge the data sets to make one data set
 #
 ########
 
