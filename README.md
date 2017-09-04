@@ -11,4 +11,4 @@ In this repository:
 - README.md - this file
 - tidy_data.txt - a tidy data set.
 - CodeBook.md - describes the contents of the data set
-- run_analysis.R - R script that performa the analysis
+- run_analysis.R - R script that performs the analysis
