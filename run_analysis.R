@@ -139,4 +139,4 @@ humanActivityMeans <- humanActivity
 
 # 7.2 output to file "tidy_data.txt"
 write.table(humanActivityMeans, "tidy_data.txt", row.names = FALSE, 
-            quote = FALSE)
+	quote = FALSE)
