@@ -64,8 +64,7 @@ humanActivity <- rbind(
 
 # 3.2 Remove unnecessary data
 
-rm(trainingSubjects, trainingValues, trainingActivity, 
-  	testSubjects, testValues, testActivity)
+rm(trainingSubjects, trainingValues, trainingActivity, testSubjects, testValues, testActivity)
 
 # 3.3 Use descriptive names
 
@@ -90,8 +89,7 @@ humanActivity <- humanActivity[, columnsKeep]
 
 # 5.1 replace activity values with named factors
 
-humanActivity$activity <- factor(humanActivity$activity, 
-	levels = activities[, 1], labels = activities[, 2])
+humanActivity$activity <- factor(humanActivity$activity, levels = activities[, 1], labels = activities[, 2])
 
 ########
 #
@@ -133,10 +131,9 @@ colnames(humanActivity) <- humanActivityCols
 ########
 
 # 7.1 Group by subject and activity - summarize using mean
-humanActivityMeans <- humanActivity  
-	group_by(subject, activity) 
+humanActivityMeans <- humanActivity %>% 
+	group_by(subject, activity) %>%
 	summarize_each(funs(mean))
 
 # 7.2 output to file "tidy_data.txt"
-write.table(humanActivityMeans, "tidy_data.txt", row.names = FALSE, 
-	quote = FALSE)
+write.table(humanActivityMeans, "tidy_data.txt", row.names = FALSE, quote = FALSE)
