@@ -6,7 +6,7 @@ library(dplyr)
 # 
 ########
 
-# 1.1 Download the zip file if it hasn't already been downloaded
+# 1.1 Download the zip file if it hasn't been downloaded
 
 zipUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 zipFile <- "UCI HAR Dataset.zip"
@@ -120,7 +120,7 @@ humanActivityCols <- gsub("std", "StandardDeviation", humanActivityCols)
 
 humanActivityCols <- gsub("BodyBody", "Body", humanActivityCols)
 
-# 6.5 use new labels as column names
+# 6.5 Create new column names
 
 colnames(humanActivity) <- humanActivityCols
 
