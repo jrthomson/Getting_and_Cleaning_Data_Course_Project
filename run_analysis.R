@@ -131,9 +131,11 @@ colnames(humanActivity) <- humanActivityCols
 ########
 
 # 7.1 Group by subject and activity - summarize using mean
+
 humanActivityMeans <- humanActivity %>% 
 	group_by(subject, activity) %>%
 	summarize_each(funs(mean))
 
 # 7.2 output to file "tidy_data.txt"
+
 write.table(humanActivityMeans, "tidy_data.txt", row.names = FALSE, quote = FALSE)
